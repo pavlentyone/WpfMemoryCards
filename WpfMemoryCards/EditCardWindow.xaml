@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfMemoryCards.EditCardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMemoryCards"
+        xmlns:filtLV="clr-namespace:FilteredListViewControl;assembly=FilteredListViewControl"
+        mc:Ignorable="d"
+        Title="EditCardWindow" Height="20cm" Width="15cm"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0.2cm">Tag:</Label>
+        <Label Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0.2cm">Question picture:</Label>
+        <Label Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0.2cm">Answer picture:</Label>
+        <Label Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0.2cm">Question:</Label>
+        <Label Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0.2cm">Answer:</Label>
+        <Label Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0.2cm">Question hint:</Label>
+        <Label Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0.2cm">Answer hint:</Label>
+        <filtLV:FilteredListView Grid.Column="1" Grid.Row="0" ItemsSource="{Binding Items}"></filtLV:FilteredListView>
+        <Button x:Name="ConfirmButton" Grid.Column="0" Grid.Row="7" Margin="0.2cm"></Button>
+    </Grid>
+</Window>
